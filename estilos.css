@@ -6,11 +6,12 @@ body {
   line-height: 1.6;
 }
 
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 60px;
   background-color: #1a1a1a;
   border-bottom: 1px solid #6a0dad;
   flex-wrap: wrap;
@@ -23,7 +24,7 @@ body {
 .header-center,
 .header-right {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -32,7 +33,7 @@ body {
   text-decoration: none;
   color: #e5e5e5;
   font-weight: bold;
-  font-size: 0.95em;
+  font-size: 1em;
   padding: 10px 16px;
   border-radius: 6px;
   transition: background-color 0.3s, color 0.3s;
@@ -40,9 +41,10 @@ body {
 
 .header a:hover {
   background-color: #6a0dad;
-  color: white;
+  color: #ffffff;
 }
 
+/* MAIN SECTION */
 .main {
   display: flex;
   flex-direction: column;
@@ -58,12 +60,13 @@ body {
   border: 1px solid #bb86fc;
   border-radius: 10px;
   padding: 30px;
-  width: 85%;
+  width: 80%;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.main .caja2 a {
+.main .caja2 a, 
+.main .caja2 p {
   display: inline-block;
   padding: 12px 24px;
   font-weight: bold;
@@ -72,6 +75,7 @@ body {
   border: 2px solid #bb86fc;
   border-radius: 8px;
   transition: all 0.3s ease;
+  font-size: 1.1em;
 }
 
 .main .caja2 a:hover {
@@ -81,7 +85,7 @@ body {
 
 .foto1 {
   margin-top: 25px;
-  width: 85%;
+  width: 80%;
   max-width: 700px;
   text-align: center;
 }
@@ -91,6 +95,7 @@ body {
   border-radius: 12px;
 }
 
+
 hr {
   border: none;
   height: 1px;
@@ -98,6 +103,7 @@ hr {
   margin: 50px 10%;
   width: 80%;
 }
+
 
 .main2 {
   display: flex;
@@ -122,10 +128,11 @@ hr {
   padding: 20px;
   border-radius: 10px;
   color: #bb86fc;
-  width: 85%;
+  width: 80%;
   text-align: center;
   margin-bottom: 30px;
 }
+
 
 .main3 {
   display: flex;
@@ -157,6 +164,7 @@ hr {
   color: #bb86fc;
 }
 
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -174,6 +182,47 @@ hr {
 
   .header a {
     width: 100%;
-    box-sizing: border-box;
+    font-size: 1em;
+  }
+
+  .main .caja1,
+  .main2 .caja2,
+  .foto1,
+  .main3 {
+    width: 100%;
+  }
+
+  .main .caja2 a,
+  .main2 .caja2 p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .caja3, .caja4 {
+    min-width: 200px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .caja1 {
+    font-size: 1.5em;
+  }
+
+  .main2 .divisor {
+    font-size: 1.5em;
+  }
+
+  .caja3, .caja4 {
+    font-size: 1em;
+    padding: 20px;
+  }
+
+  .header-left img {
+    height: 30px;
+  }
+
+  .main, .main2, .main3 {
+    padding: 40px 10px;
   }
 }
